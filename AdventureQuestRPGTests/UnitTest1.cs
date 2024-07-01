@@ -8,7 +8,7 @@ namespace AdventureQuestRPGTests
         public void PlayerAttacks()
         {
             //Arreng
-            Player player = new Player("Abood", 100, "Sword");
+            Player player = new Player("Hero", 100, "Sword");
             Dragon dragon = new Dragon("Dragon", 100, "Scales");
 
             //Act
@@ -23,7 +23,7 @@ namespace AdventureQuestRPGTests
         public void EnemyAttack()
         {
             //Arreng
-            Player player = new Player("Abood", 100, "Sword");
+            Player player = new Player("Hero", 100, "Sword");
             Dragon dragon = new Dragon("Dragon", 100, "Scales");
             
             //Act
@@ -38,7 +38,7 @@ namespace AdventureQuestRPGTests
         public void WinnerHasHhealthGreaterThanZero()
         {
             //Arreng
-            Player player = new Player("Abood", 100, "Sword");
+            Player player = new Player("Hero", 100, "Sword");
             Dragon dragon = new Dragon("Dragon", 100, "Scales");
 
             //Act
