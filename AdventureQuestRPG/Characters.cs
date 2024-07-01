@@ -39,27 +39,21 @@ namespace AdventureQuestRPG
         }
         public void DesblayInfo()
         {
-            Console.WriteLine($"Player Name: {Name} , Health: {Health}  , Defense: {Defense}");
+            Console.WriteLine($"Player Name: {Name}, Health: {Health}, Defense: {Defense}");
         }
     }
                                 // Monster abstract Class //
     public abstract class Monster : Characters
         {
             public Monster(string name, int health, string defense) :
-                base(name, health, defense)
-            {
-            
-            }
+                base(name, health, defense){}
         }
                                      // Dragon Class //
         public class Dragon : Monster
             {
             //Constructor 
         public Dragon(string name, int health,  string defense) :
-          base(name, health,  defense)
-        {
-
-        }           
+          base(name, health,  defense){}           
         public void DesblayInfo()
         {
             Console.WriteLine($"Monster Name: {Name} , Health: {Health}  , Defense: {Defense}");

@@ -18,7 +18,6 @@
                 Falcon falcon = new Falcon("Falcon", 100, "Scales");          //Falcon
 
                 BattleSystem battleSystem = new BattleSystem();
-                // battleSystem.StartBattel(dragon, player);
 
                 battleSystem.StartBattel(falcon, player);
             }catch (Exception ex)
