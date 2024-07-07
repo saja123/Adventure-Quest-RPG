@@ -61,6 +61,7 @@ namespace AdventureQuestRPG
     public class Player : Characters
     {
         public int OregenalHealth { get; set; }
+        public Inventory Inventory { get; set; }
 
 
         //Constructor 
@@ -72,6 +73,7 @@ namespace AdventureQuestRPG
             Defense = 20;
             AttackPower = 30;
             OregenalHealth = 100;
+            Inventory = new Inventory();
         }
         public void DesblayInfo()
         {
