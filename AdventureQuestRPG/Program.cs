@@ -25,6 +25,7 @@
                         }
                         Console.WriteLine("Would you play again (Y/N)?");
                         Console.Write("Answer Here: ");
+
                         string response = Console.ReadLine().ToUpper();
                         if (response != "Y")
                         {

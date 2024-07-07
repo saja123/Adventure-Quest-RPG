@@ -9,8 +9,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace AdventureQuestRPG
 {
- 
-    public class BattleSystem
+    public class BattleSystem : Inventory
     {
         public static void Attack(IBattleStates attacker, IBattleStates target)
         {
@@ -60,7 +59,7 @@ namespace AdventureQuestRPG
                         Console.WriteLine($"The {player.Name} won");
                         Console.ResetColor();
                         player.CheckExperiencePoints(10);    //from Characters
-      
+                      //  DropInventory(player);             //from Inventory
                         break;
                     }
 
