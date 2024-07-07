@@ -49,7 +49,37 @@ namespace AdventureQuestRPGTests
             Assert.True(player.Health > 0 || dragon.Health >0);
         }
 
-        
+        [Fact]
+        public void TestBossMonster()
+        {
+            //Arreng
+            Player player = new Player();
+            Monster boosMonster = new Eagle();
+
+            //Act
+            BattleSystem.StartBattel(boosMonster, player);
+
+            //Assert
+            Assert.True(boosMonster.Health == 0 || player.Health == 0);
+        }
+
+        [Fact]
+        public void TestMoveToLocation()
+        {
+            //Arrang
+            List<string> locations = new List<string> { "WadiRumDesert", "DeadSea", "AjlounForest", "Petra", "MountNebo" };// Location List
+            string choos = "DeadSea";
+
+            //Act
+            while (!locations.Contains(choos, StringComparer.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("invalid input");
+            }
+
+            //Assert
+            Assert.True(choos == "DeadSea");
+
+        }
 
     }
 }
