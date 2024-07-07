@@ -14,7 +14,7 @@ namespace AdventureQuestRPG
             Monster[] monsters = { new Falcon(), new Dragon(), new BossMonster() };
             int index = random.Next(monsters.Length);
             Monster monster = monsters[index];
-
+            BattleSystem battleSystem = new BattleSystem(); 
 
 
             List<string> locations = new List<string>                       // Location List
@@ -41,7 +41,7 @@ namespace AdventureQuestRPG
                 chosenLocation = Console.ReadLine();
             }
             Console.WriteLine($"Welcome to {chosenLocation}, Play Started");
-            BattleSystem.StartBattel(monster, player);
+            battleSystem.StartBattel(monster, player);
 
             Console.WriteLine($"ExperiencePoints : {player.ExperiencePoints}");
 

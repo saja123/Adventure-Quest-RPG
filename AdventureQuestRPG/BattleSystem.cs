@@ -11,7 +11,7 @@ namespace AdventureQuestRPG
 {
     public class BattleSystem : Inventory
     {
-        public static void Attack(IBattleStates attacker, IBattleStates target)
+        public void Attack(IBattleStates attacker, IBattleStates target)
         {
             try
             {
@@ -37,7 +37,7 @@ namespace AdventureQuestRPG
                 Console.WriteLine(ex);
             }
         }
-        public static void StartBattel(Monster enemy, Player player)
+        public void StartBattel(Monster enemy, Player player)
         {
 
             try

@@ -8,12 +8,11 @@ namespace AdventureQuestRPGTests
         public void PlayerAttacks()
         {
             //Arreng
-            Player player = new Player("Hero", 100, "Sword");
-            Dragon dragon = new Dragon("Dragon", 100, "Scales");
-
+            Player player = new Player();
+            Dragon dragon = new Dragon();
             //Act
-            BattleSystem battleSystem = new BattleSystem();
-            battleSystem.Attack(player,dragon);
+            BattleSystem battle = new BattleSystem();
+            battle.Attack(player, dragon);
 
             //Assert
             Assert.True(dragon.Health < 100);
@@ -23,8 +22,8 @@ namespace AdventureQuestRPGTests
         public void EnemyAttack()
         {
             //Arreng
-            Player player = new Player("Hero", 100, "Sword");
-            Dragon dragon = new Dragon("Dragon", 100, "Scales");
+            Player player = new Player();
+            Dragon dragon = new Dragon();
             
             //Act
             BattleSystem battleSystem = new BattleSystem();
@@ -38,11 +37,11 @@ namespace AdventureQuestRPGTests
         public void WinnerHasHhealthGreaterThanZero()
         {
             //Arreng
-            Player player = new Player("Hero", 100, "Sword");
-            Dragon dragon = new Dragon("Dragon", 100, "Scales");
+            Player player = new Player();
+            Dragon dragon = new Dragon();
+            BattleSystem battleSystem = new BattleSystem();
 
             //Act
-            BattleSystem battleSystem = new BattleSystem();
             battleSystem.Attack(player, dragon);
 
             //Assert
@@ -54,10 +53,11 @@ namespace AdventureQuestRPGTests
         {
             //Arreng
             Player player = new Player();
-            Monster boosMonster = new Eagle();
+            Monster boosMonster = new BossMonster();
+            BattleSystem battle = new BattleSystem();
 
             //Act
-            BattleSystem.StartBattel(boosMonster, player);
+            battle.StartBattel(boosMonster, player);
 
             //Assert
             Assert.True(boosMonster.Health == 0 || player.Health == 0);
@@ -67,8 +67,8 @@ namespace AdventureQuestRPGTests
         public void TestMoveToLocation()
         {
             //Arrang
-            List<string> locations = new List<string> { "WadiRumDesert", "DeadSea", "AjlounForest", "Petra", "MountNebo" };// Location List
-            string choos = "DeadSea";
+            List<string> locations = new List<string> { "Wadi Rum Desert", "Dead Sea", "Ajloun Forest", "Petra", "Mount Nebo" };// Location List
+            string choos = "Dead Sea";
 
             //Act
             while (!locations.Contains(choos, StringComparer.OrdinalIgnoreCase))
@@ -77,7 +77,7 @@ namespace AdventureQuestRPGTests
             }
 
             //Assert
-            Assert.True(choos == "DeadSea");
+            Assert.True(choos == "Dead Sea");
 
         }
 
